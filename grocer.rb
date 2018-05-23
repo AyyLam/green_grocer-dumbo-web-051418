@@ -27,7 +27,7 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
-  cart.each do |item, traits| 
+  cart.each do |item| 
     if cart[item][:clearance] == true 
       discount_price = cart[item][:price] * 0.80
       cart[item][:price] = discount_price.round(2)
